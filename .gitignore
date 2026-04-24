@@ -1,0 +1,35 @@
+# 备份文件
+*.bak*
+backup*
+*.backup
+
+# 开发数据文件
+*.xlsx
+*.csv
+*.json
+
+# 开发脚本
+*.py
+*.md
+
+# 旧版本文件
+*-1.html
+*-2.html
+*-kp.html
+
+# 无关文件
+404.html
+BingSiteAuth.xml
+google*.html
+aesthetics-narrative-evolution.html
+bcc-laseraway*.html
+collagen.html
+glp-1.html
+why-aesthetics-medicine.html
+sitemap.html
+bcc-brand.pdf
+
+# IDE配置
+.claude/
+.DS_Store
+Thumbs.db

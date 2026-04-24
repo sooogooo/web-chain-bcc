@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- 首页：品牌加盟官方手册 -->
+    <url>
+        <loc>https://chain.bccsw.cn/</loc>
+        <lastmod>2026-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://docs.bccsw.cn/share-index.jpg</image:loc>
+            <image:title>联合丽格集团官网 - 医生创业平台</image:title>
+        </image:image>
+    </url>
+
+    <!-- 机构分布地图 -->
+    <url>
+        <loc>https://chain.bccsw.cn/bcc-maps.html</loc>
+        <lastmod>2026-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://docs.bccsw.cn/share-maps.jpg</image:loc>
+            <image:title>联合丽格机构分布地图 - 全国160+机构查询</image:title>
+        </image:image>
+    </url>
+
+    <!-- 品牌支持体系 -->
+    <url>
+        <loc>https://chain.bccsw.cn/brand-support.html</loc>
+        <lastmod>2026-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://docs.bccsw.cn/share-brand.jpg</image:loc>
+            <image:title>联合丽格品牌支持体系 - 四大加盟支持赋能</image:title>
+        </image:image>
+    </url>
+
+    <!-- 加盟申请 -->
+    <url>
+        <loc>https://chain.bccsw.cn/join.html</loc>
+        <lastmod>2026-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://docs.bccsw.cn/share-join.jpg</image:loc>
+            <image:title>医美加盟申请表 - 联合丽格集团</image:title>
+        </image:image>
+    </url>
+
+    <!-- 加盟现场 -->
+    <url>
+        <loc>https://chain.bccsw.cn/franchise-scene.html</loc>
+        <lastmod>2026-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://chain.bccsw.cn/images01/franchise-banner.png</image:loc>
+            <image:title>联合丽格加盟现场 - 医美签约里程碑实录</image:title>
+        </image:image>
+    </url>
+
+</urlset>
