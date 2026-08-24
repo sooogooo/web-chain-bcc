@@ -42,7 +42,6 @@
 
     <!-- 预连接关键资源域名 -->
     <link rel="preconnect" href="https://docs.bccsw.cn">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2S3FKLTRMS"></script>
@@ -56,15 +55,15 @@
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="/tw/bcc-maps.html.css">
 
-    <!-- FontAwesome (使用 jsdelivr 镜像) -->
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- FontAwesome (BootCDN 国内镜像) -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <!-- ECharts -->
-    <script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js"></script>
+    <script src="/js/echarts.min.js"></script>
     <script>
         window.chinaMapLoaded = false;
         window.mapScript = document.createElement('script');
-        window.mapScript.src = 'https://cdn.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js';
+        window.mapScript.src = '/js/echarts-china.js';
         window.mapScript.onload = function() { window.chinaMapLoaded = true; };
         document.head.appendChild(window.mapScript);
     </script>
@@ -461,6 +460,9 @@
             border-radius: 3px;
         }
     </style>
+    <!-- 本地二维码生成(替代境外 qrserver API) -->
+    <script src="/js/qrcode.min.js"></script>
+    <script src="/js/bcc-qr.js"></script>
 </head>
 <body class="bg-slate-50 text-gray-700">
 
@@ -1557,7 +1559,7 @@
 
         function handleShare() {
             const qrImg = document.getElementById('share-qr');
-            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(window.location.href)}&color=4a6fa5`;
+            bccSetQR(qrImg, window.location.href, '#4a6fa5');
             document.getElementById('share-overlay').style.display = 'block';
         }
 

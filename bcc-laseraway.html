@@ -15,11 +15,10 @@
     <link rel="canonical" href="https://chain.bccsw.cn/bcc-laseraway.html">
     <link rel="icon" href="https://docs.bccsw.cn/favicon.png" type="image/png">
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdn.plot.ly">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/tw/bcc-laseraway.html.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/chart.umd.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
     <script>
         tailwind.config = {
@@ -57,6 +56,9 @@
       gtag('js', new Date());
       gtag('config', 'G-2S3FKLTRMS');
     </script>
+    <!-- 本地二维码生成(替代境外 qrserver API) -->
+    <script src="/js/qrcode.min.js"></script>
+    <script src="/js/bcc-qr.js"></script>
 </head>
 <body class="bg-white text-gray-700 leading-relaxed pb-20 md:pb-0">
 
@@ -574,7 +576,7 @@
         function showShare() {
             const modal = document.getElementById('share-modal');
             const qr = document.getElementById('share-qr');
-            qr.src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);
+            bccSetQR(qr, window.location.href, '#000000');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
         }

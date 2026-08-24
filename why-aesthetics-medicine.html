@@ -324,6 +324,9 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
     </style>
+    <!-- 本地二维码生成(替代境外 qrserver API) -->
+    <script src="/js/qrcode.min.js"></script>
+    <script src="/js/bcc-qr.js"></script>
 </head>
 <body class="bg-warm-white text-gray-800 pb-20 md:pb-0">
 
@@ -938,7 +941,7 @@
         function showShareQR() {
             const qrImg = document.getElementById('share-qr');
             const currentUrl = encodeURIComponent(window.location.href);
-            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${currentUrl}`;
+            bccSetQR(qrImg, window.location.href, '#000000');
             document.getElementById('share-overlay').style.display = 'block';
         }
 

@@ -298,6 +298,9 @@
             transform: scale(0.95);
         }
     </style>
+    <!-- 本地二维码生成(替代境外 qrserver API) -->
+    <script src="/js/qrcode.min.js"></script>
+    <script src="/js/bcc-qr.js"></script>
 </head>
 <body class="bg-slate-50 text-gray-800 pb-[80px] md:pb-0"> <!-- 底部留白给移动端固定条 -->
 
@@ -791,7 +794,7 @@
             // 使用 QR Server 生成当前页面二维码
             const pageUrl = window.location.href;
             const encodedUrl = encodeURIComponent(pageUrl);
-            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodedUrl}&color=0d2c54`;
+            bccSetQR(qrImg, pageUrl, '#0d2c54');
 
             document.getElementById('share-overlay').style.display = 'block';
         }

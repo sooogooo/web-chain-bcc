@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="/tw/glp-1.html.css">
 
     <!-- Remix Icon -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="/js/remixicon/remixicon.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -204,6 +204,9 @@
       gtag('js', new Date());
       gtag('config', 'G-2S3FKLTRMS');
     </script>
+    <!-- 本地二维码生成(替代境外 qrserver API) -->
+    <script src="/js/qrcode.min.js"></script>
+    <script src="/js/bcc-qr.js"></script>
 </head>
 <body class="bg-warm-white text-gray-800 pb-20 md:pb-0">
 
@@ -840,7 +843,7 @@
         function showShareQR() {
             const qrImg = document.getElementById('share-qr');
             const currentUrl = encodeURIComponent(window.location.href);
-            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${currentUrl}`;
+            bccSetQR(qrImg, window.location.href, '#000000');
             document.getElementById('share-overlay').style.display = 'block';
         }
 

@@ -87,13 +87,13 @@
     <link rel="stylesheet" href="/tw/aesthetics-narrative-evolution.html.css">
 
     <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/chart.umd.min.js"></script>
 
     <!-- Plotly.js -->
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 
     <!-- html2canvas (for screenshot) -->
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="/js/html2canvas.min.js"></script>
 
     <!-- FontAwesome -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -425,6 +425,9 @@
             }
         }
     </style>
+    <!-- 本地二维码生成(替代境外 qrserver API) -->
+    <script src="/js/qrcode.min.js"></script>
+    <script src="/js/bcc-qr.js"></script>
 </head>
 <body class="bg-warm-white text-gray-800 pb-20 md:pb-0">
 
@@ -974,7 +977,7 @@
         function showShareQR() {
             const qrImg = document.getElementById('share-qr');
             const currentUrl = encodeURIComponent(window.location.href);
-            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${currentUrl}`;
+            bccSetQR(qrImg, window.location.href, '#000000');
             document.getElementById('share-overlay').style.display = 'block';
         }
 
