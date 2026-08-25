@@ -27,12 +27,12 @@
     <!-- 微信分享 meta 标签 (重要：用于微信内分享显示) -->
     <meta itemprop="name" content="联合丽格集团官网 - 医生创业平台">
     <meta itemprop="description" content="中国领先的医生创业平台，旗下290+医疗机构覆盖全国。提供品牌授权、营销赋能、培训支持、供应链支持四大加盟体系。">
-    <meta itemprop="image" content="https://docs.bccsw.cn/share-index.jpg">
+    <meta itemprop="image" content="https://chain.bccsw.cn/share-icon.png">
 
     <!-- Open Graph (Facebook/通用分享) -->
     <meta property="og:title" content="联合丽格集团官网 - 医生创业平台 | 医美加盟">
     <meta property="og:description" content="中国领先的医生创业平台，旗下290+医疗机构覆盖全国100+城市。提供品牌授权、营销赋能、培训支持、供应链支持四大加盟体系。">
-    <meta property="og:image" content="https://docs.bccsw.cn/share-index.jpg">
+    <meta property="og:image" content="https://chain.bccsw.cn/share-icon.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chain.bccsw.cn/">
     <meta property="og:site_name" content="联合丽格集团">
@@ -42,7 +42,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="联合丽格集团 - 品牌加盟官方手册">
     <meta name="twitter:description" content="回归医疗本质，携手开创，互利共赢。">
-    <meta name="twitter:image" content="https://docs.bccsw.cn/share-index.jpg">
+    <meta name="twitter:image" content="https://chain.bccsw.cn/share-icon.png">
 
     <!-- Canonical URL (避免重复内容) -->
     <link rel="canonical" href="https://chain.bccsw.cn/">
@@ -150,7 +150,7 @@
                 },
                 "primaryImageOfPage": {
                     "@type": "ImageObject",
-                    "url": "https://docs.bccsw.cn/share-index.jpg"
+                    "url": "https://chain.bccsw.cn/share-icon.png"
                 },
                 "dateModified": "2026-08-25"
             },
@@ -302,7 +302,9 @@
     <script src="/js/qrcode.min.js"></script>
     <script src="/js/bcc-qr.js"></script>
 </head>
-<body class="bg-slate-50 text-gray-800 pb-[80px] md:pb-0"> <!-- 底部留白给移动端固定条 -->
+<body class="bg-slate-50 text-gray-800 pb-[80px] md:pb-0">
+<!-- WeChat share fallback thumbnail: first image in DOM -->
+<img src="/share-icon.png" width="500" height="500" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:0;"> <!-- 底部留白给移动端固定条 -->
 
     <!-- Schema.org 结构化数据 (Organization) -->
     <script type="application/ld+json">
@@ -839,14 +841,14 @@
                 title: '联合丽格集团 - 品牌加盟官方手册',
                 desc: '回归医疗本质，携手开创，互利共赢。',
                 link: window.location.href,
-                imgUrl: 'https://docs.bccsw.cn/share-index.jpg',
+                imgUrl: 'https://chain.bccsw.cn/share-icon.png',
                 success: function() {}
             });
             // 分享到朋友圈
             wx.updateTimelineShareData({
                 title: '联合丽格集团 - 品牌加盟官方手册',
                 link: window.location.href,
-                imgUrl: 'https://docs.bccsw.cn/share-index.jpg',
+                imgUrl: 'https://chain.bccsw.cn/share-icon.png',
                 success: function() {}
             });
         });
