@@ -243,10 +243,12 @@
         #mobile-menu {
             transition: transform 0.3s ease;
             transform: translateY(-100%);
-        }
+                    visibility: hidden;
+}
         #mobile-menu.open {
             transform: translateY(0);
-        }
+                    visibility: visible;
+}
         .active-scale:active {
             transform: scale(0.98);
         }

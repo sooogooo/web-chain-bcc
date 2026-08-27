@@ -288,10 +288,12 @@
         #mobile-menu {
             transition: transform 0.3s ease-in-out;
             transform: translateY(-100%);
-        }
+                    visibility: hidden;
+}
         #mobile-menu.open {
             transform: translateY(0);
-        }
+                    visibility: visible;
+}
 
         /* 点击波纹效果 */
         .active-scale:active {

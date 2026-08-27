@@ -289,10 +289,12 @@
         #mobile-menu {
             transition: transform 0.3s ease-in-out;
             transform: translateY(-100%);
-        }
+                    visibility: hidden;
+}
         #mobile-menu.open {
             transform: translateY(0);
-        }
+                    visibility: visible;
+}
         /* 响应式表单高度 */
         .form-container {
             height: 500px;
